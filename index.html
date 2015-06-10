@@ -58,30 +58,42 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <body unresolved class="fullbleed layout vertical">
 <template is="dom-bind" id="app">
 
-  <paper-drawer-panel id="paperDrawerPanel" forceNarrow>
+  <paper-drawer-panel id="paperDrawerPanel" >
     <div drawer>
-
-      <!-- Drawer Toolbar -->
-      <paper-toolbar id="drawerToolbar">
-        <span>Menu</span>
-      </paper-toolbar>
 
       <!-- Drawer Content -->
       <paper-menu class="list" attr-for-selected="data-route" selected="{{route}}" on-iron-select="onMenuSelect">
         <a data-route="home" href="/">
           <iron-icon icon="home"></iron-icon>
-          <span>Home</span>
+          <span>home</span>
         </a>
 
-        <a data-route="users" href="/users">
+        <a data-route="about" href="/about">
           <iron-icon icon="info"></iron-icon>
-          <span>Users</span>
+          <span>about</span>
         </a>
 
-        <a data-route="contact" href="/contact">
+        <a data-route="projects" href="/projects">
           <iron-icon icon="mail"></iron-icon>
-          <span>Contact</span>
+          <span>projects</span>
         </a>
+
+        <a data-route="research" href="/research">
+          <iron-icon icon="mail"></iron-icon>
+          <span>research</span>
+        </a>
+
+        <a data-route="speaking" href="/speaking">
+          <iron-icon icon="mail"></iron-icon>
+          <span>speaking</span>
+        </a>
+
+        <a data-route="blog" href="/blog">
+          <iron-icon icon="mail"></iron-icon>
+          <span>blog</span>
+        </a>
+
+
       </paper-menu>
     </div>
     <paper-header-panel main mode="waterfall-tall">
@@ -93,12 +105,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         <span class="flex"></span>
 
         <!-- Toolbar icons -->
-        <paper-icon-button icon="refresh"></paper-icon-button>
-        <paper-icon-button icon="search"></paper-icon-button>
+<!--         <paper-icon-button icon="refresh"></paper-icon-button>
+        <paper-icon-button icon="search"></paper-icon-button> -->
         <div class="middle"></div>
 
         <!-- Application name -->
-        <div class="appname bottom paper-font-display2">Polymer Starter Kit</div>
+        <div class="appname bottom paper-font-display2">Riley Crane</div>
 
       </paper-toolbar>
 
@@ -107,20 +119,34 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         <section data-route="home">
           <paper-material elevation="1">
-            <my-greeting></my-greeting>
 
-            <p class="paper-font-subhead">You now have:</p>
-            <my-list></my-list>
+          <p class="paper-font-body2">
+            Hi.  I’m a researcher, entrepreneur, physicist + engineer.  I write poetry in code, <a href="/full-stack">full-stack</a>, full-stop.  I’m a dreamer and a doer.  I like big, hard, meaty problems.  I like the joy that comes from bringing something new into the world.  
+          </p>
+          </paper-material>
 
-            <p class="paper-font-body2">Looking for more Web App layouts? Check out our <a href="https://github.com/PolymerElements/app-layout-templates">layouts</a> collection. You can also <a href="http://polymerelements.github.io/app-layout-templates/">preview</a> them live.</p>
+          <paper-material elevation="1">
+            <p class="paper-font-body2">
+              Some other things about me.  I’m a dad, I make pizza & pasta from scratch, I was a guest on Colbert, I testified before Congress, I started a company that was acquired, I have a PhD in physics, I was awarded a 5-year-no-strings-attached fellowship, I spent some time at the Media Lab at MIT as a postdoc where I found 10 red balloons.  I live in SF and am free for the first time in years.
+            </p>
+          </paper-material>
+
+        </section>
+
+        <section data-route="about">
+          <paper-material elevation="1">
+            <h2 class="paper-font-display2">About</h2>
+            <p>I work on projects which try to uncover the hidden patterns governing individual and collective activity. My research is focused on understanding the hidden patterns behind collective social behavior. A physicist by training, he has spent the last several years quantifying human behavior and social interactions, and has applied his models to diverse systems such as YouTube and the humanitarian response to the Asian Tsunami. Riley is the winner of the 2009 DARPA Network Challenge, a Pentagon sponsored competition aimed at exploring the roles the Internet and social networking play in the timely communication, wide-area team-building, and urgent mobilization required to solve broad-scope, time-critical problems. In addition to his scientific work he consults for business and government and has started several companies, which harness the power of social networks and social media and has built viral media campaigns for books and the United Nations. His work has been featured in newspapers and magazines such as The New York Times, New Scientist, and on television including CNN and The Colbert Report.
+            </p>
           </paper-material>
         </section>
 
-        <section data-route="users">
+
+        <section data-route="full-stack">
           <paper-material elevation="1">
-            <h2 class="paper-font-display2">Users</h2>
-            <p>This is the users section</p>
-            <a href="/users/Rob">Rob</a>
+            <h2 class="paper-font-display2">Code</h2>
+              <p class="paper-font-body2">Python, Django, Flask, HTML/CSS/Javascript, Polymer, Ansible. EC2, Digital Ocean.  Enjoy backend > frontend > infrastructure.  
+              </p>
           </paper-material>
         </section>
 
